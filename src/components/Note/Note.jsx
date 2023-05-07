@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { NoteContext } from "../../Context/NoteContext";
 import { UserContext } from "../../Context/UserContext";
-import { deleteNotes, showDeleteAllert } from "../../utils/Note";
+import { deleteNotes, showDeleteAllert, showUpdateForm } from "../../utils/Note";
 import style from "./Note.module.css";
 
 export default function Note({noteInfo}) {
@@ -19,10 +19,20 @@ export default function Note({noteInfo}) {
         {noteInfo.desc};
           </p>
         </div>
-
         <div className="note-footer">
-          <i className="fa-solid fa-pen-to-square pointer me-2"></i>
-
+          <i className="fa-solid fa-pen-to-square pointer me-2" onClick={() => {
+              showUpdateForm({
+                token,
+                userInfo,
+                NoteID: noteInfo._id,
+                PrevData: {
+                  title: noteInfo.title,
+                  desc: noteInfo.desc,
+                },
+                updater: setNotes,
+              
+              });
+            }}></i>
           <i className="bi bi-archive-fill pointer" onClick={()=>{showDeleteAllert({token ,NoteID : noteInfo._id,updater : setNotes,userInfo})}} ></i>
         </div>
       </div>

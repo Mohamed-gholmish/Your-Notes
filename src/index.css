@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Zanabazar+Square&display=swap");
 :root {
   /* ^ ====> Colors */
-  --violet-900: #2f2569;
-  --violet-800: #913bd3;
-  --violet-700: #9a53d2;
+  --violet-900: #044afd;
+  --violet-800: #3e6ef1;
+  --violet-700: #6aa7f1;
   --violet-200: #8388a7;
   --violet-100: #ecd8fe;
-  --orange-900: #bf6040;
+  --orange-900: #c1ecf6;
   --orange-100: #fee5dd;
   --green-900: #349960;
   --green-100: #d8efe2;
