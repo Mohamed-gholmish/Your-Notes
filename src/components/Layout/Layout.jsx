@@ -8,7 +8,6 @@ export default function Layout() {
     localStorage.getItem("isMinimized")
   );
   localStorage.setItem("isMinimized", isMinimized);
-
   return (
     <>
       <div className="d-flex min-vh-100 align-items-stretch">
