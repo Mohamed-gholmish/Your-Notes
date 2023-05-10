@@ -14,7 +14,6 @@ export default function UserContextProvider({ children }) {
     setToken(null);
     setUserInfo(null);
   }
-
   return (
     <>
       <UserContext.Provider
