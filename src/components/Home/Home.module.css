@@ -1,6 +1,6 @@
 .notes {
   --gap: 10px;
-  --number-of-notes: 3;
+  --number-of-notes: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -17,3 +17,10 @@
 .empty {
   height: calc(100vh - 100px);
 }
+
+[class ='vertical-line']{
+  width: 8px;
+  height: 100vh;
+  background-color: black;
+}
+

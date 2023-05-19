@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://Mohamed-gholmish.github.io/Your-notes",
+  "homepage": "https://Mohamed-gholmish.github.io/Your-notes",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
@@ -21,6 +21,7 @@
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
     "react-router-dom": "^6.10.0",
     "sweetalert2": "^11.7.3",
     "sweetalert2-react-content": "^5.0.7",

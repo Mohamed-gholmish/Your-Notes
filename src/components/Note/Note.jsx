@@ -9,7 +9,7 @@ import {
 } from "../../utils/Note";
 import style from "./Note.module.css";
 
-export default function Note({ noteInfo }) {
+export default function Note({ noteInfo  }) {
   const { userInfo } = useContext(UserContext);
   const { setNotes } = useContext(NoteContext);
   const { token } = useContext(UserContext);
@@ -18,7 +18,7 @@ export default function Note({ noteInfo }) {
     <>
       <div className={`${style.note} note shadow `}>
         <div className="note-body">
-          <h2 className="h6 fw-semibold m-0 font-Montserrat  text-center">
+          <h2 className="h6 fw-semibold m-0 font-Montserrat  text-center handle">
             {noteInfo.title}
           </h2>
           <p className={`mb-0 mt-2`}>{noteInfo.desc};</p>
