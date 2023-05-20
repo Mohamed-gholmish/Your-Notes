@@ -8,19 +8,14 @@
 }
 
 .notes > * {
-  width: calc(
-    (100% - calc(var(--gap) * (var(--number-of-notes) - 1))) /
-      var(--number-of-notes)
-  );
+  width: 20vw;
 }
-
 .empty {
   height: calc(100vh - 100px);
 }
 
-[class ='vertical-line']{
+[class="vertical-line"] {
   width: 8px;
   height: 100vh;
   background-color: black;
 }
-

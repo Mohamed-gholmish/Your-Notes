@@ -1,5 +1,7 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import { CirclePicker } from 'react-color'
+
 
 export async function getNotes({token , userInfo ,updater}){
     const userDetails = {

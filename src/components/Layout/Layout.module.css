@@ -6,12 +6,21 @@
   --column: 2;
   width: calc(100% * var(--column) / var(--layout));
   min-width: 250px;
-  transition: width 200ms;
+  transition: width 1000;
+  -webkit-transition: width 1000;
+  -moz-transition: width 1000;
+  -ms-transition: width 1000;
+  -o-transition: width 1000;
+  background-color: #08f43b;
 }
 
 .sidebar-mini {
   width: 70px;
   transition: width 350ms;
+  -webkit-transition: width 350ms;
+  -moz-transition: width 350ms;
+  -ms-transition: width 350ms;
+  -o-transition: width 350ms;
 }
 
 .sidebar-mini i {
