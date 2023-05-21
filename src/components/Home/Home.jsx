@@ -13,8 +13,7 @@ export default function Home() {
   const { notes, setNotes } = useContext(NoteContext);
   const { userInfo, token } = useContext(UserContext);
   let [id, setid] = useState();
-  let drag = null;
-  const [positions, setPositions] = useState({});
+  const [position, setPositions] = useState({});
   console.log(notes);
   console.log(token);
   console.log(userInfo);
@@ -35,36 +34,41 @@ export default function Home() {
     if (notesContainer) {
       notesContainer.childNodes.forEach((noteNode) => {
         const noteId = noteNode.getAttribute("data-note-id");
-        if (noteId && positions[noteId]) {
-          noteNode.style.transform = `translate(${positions[noteId].x}px, ${positions[noteId].y}px)`;
+        if (noteId && position[noteId]) {
+          noteNode.style.transform = `translate(${position[noteId].x}px, ${position[noteId].y}px)`;
+         noteNode.firstChild
         }
       });
     }
-  }, [positions]);
+  }, [position]);
   const handleNoteStart = (event, ui) => {
     console.log("Drag started");
   };
   const handleNoteDrag = (event, ui) => {
     const { x, y } = ui;
+    console.log(ui,"uiuiuiuiui");
     const noteId = id;
     console.log(noteId, "onte id is");
     setPositions((prevPositions) => ({
       ...prevPositions,
-      [noteId]: { x, y },
+      [noteId]: { x, y }
     }));
-    console.log(positions, "position positionj");
+    console.log(position, "position positionj");
     console.log(event, "event event ");
   };
   const handleNoteStop = (event, ui) => {
     console.log("Drag stopped");
+   
   };
   useEffect(() => {
-    localStorage.setItem("notePositions", JSON.stringify(positions));
-    console.log(positions);
+    console.log(position,"ppppppppppppp");
+    localStorage.setItem("notePositions", JSON.stringify(position));
+    
     console.log(JSON.parse(localStorage.getItem("notePositions")));
-  }, [positions]);
+  }, [position]);
   function handleClick(e) {
     setid(e);
+  
   }
   return (
     <>
@@ -81,19 +85,21 @@ export default function Home() {
                   key={noteInfo._id}
                   axis="both"
                   handle=".note-handle"
-                  position={positions[noteInfo._id]}
+                  position={position[noteInfo._id]}
                   grid={[25, 25]}
                   scale={1}
                   onStart={handleNoteStart}
                   onDrag={handleNoteDrag}
                   onStop={handleNoteStop}
+                  border="parent"
                 >
                   <div
                     className="note-handle "
                     data-note-id={noteInfo._id}
                     onClick={() => handleClick(noteInfo._id)}
+                    style={{backgroundColor:"#000000"}}
                   >
-                    <Note memoizedNoteInfo={noteInfo} />
+                    <Note noteInfo={noteInfo}  />
                   </div>
                 </Draggable>
               ))}
