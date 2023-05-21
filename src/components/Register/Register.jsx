@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Register.module.css";
-import regsiterImage from "../../assets/images/register.jpg";
+import regsiterImage from "../../assets/images/register.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";

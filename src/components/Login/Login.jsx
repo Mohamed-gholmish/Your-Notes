@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Login.module.css";
-import LoginImage from "../../assets/images/login.webp";
+import LoginImage from "../../assets/images/login.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup"
 import axios from "axios";
@@ -67,16 +67,16 @@ export default function Login() {
       <div className={`${style.container} row`}>
         <figure className="col-md-8 m-0 p-md-0">
           <div className="image-container">
-            <img src={LoginImage} className="w-100" alt="Regsiter Image" />
+            <img src={LoginImage} className="w-100 " alt="Regsiter Image" />
           </div>
         </figure>
         <form onSubmit={ formic.handleSubmit} 
         className="col-md-4 d-flex flex-column justify-content-center px-5">
           <h2 className="m-0 fw-bold font-Montserrat">
-            Welcome Back <i className="fa-solid fa-heart ms-0 text-main"></i>
+            Welcome Back<i className="fa-solid fa-heart ms-0 text-main"></i>
           </h2>
           <p className="mb-3">
-            Thanks for returning! Please sign in to access your account.
+            Thanks for returning! 
           </p>
           <div className="form-group d-flex flex-column gap-2 justify-content-center">
             <input

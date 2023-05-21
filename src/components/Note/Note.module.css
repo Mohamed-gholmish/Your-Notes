@@ -3,6 +3,7 @@
   background-color: var(--white-900);
   border: 2px solid var(--white-700);
   border-radius: 12px;
+  color: rgb(255, 255, 255);
 }
 
 .note [class="note-body"] {

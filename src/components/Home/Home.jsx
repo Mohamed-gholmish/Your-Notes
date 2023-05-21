@@ -25,7 +25,7 @@ export default function Home() {
     console.log(savedPositions);
     if (savedPositions) {
       setPositions(savedPositions);
-      console.log("saved is ok");
+      // console.log("saved is ok");
     }
   }, []);
   useEffect(() => {
@@ -41,12 +41,12 @@ export default function Home() {
       });
     }
   }, [position]);
-  const handleNoteStart = (event, ui) => {
-    console.log("Drag started");
-  };
+  // const handleNoteStart = (event, ui) => {
+  //   console.log("Drag started");
+  // };
   const handleNoteDrag = (event, ui) => {
     const { x, y } = ui;
-    console.log(ui,"uiuiuiuiui");
+    // console.log(ui,"uiuiuiuiui");
     const noteId = id;
     console.log(noteId, "onte id is");
     setPositions((prevPositions) => ({
@@ -54,21 +54,20 @@ export default function Home() {
       [noteId]: { x, y }
     }));
     console.log(position, "position positionj");
-    console.log(event, "event event ");
+    // console.log(event, "event event ");
   };
-  const handleNoteStop = (event, ui) => {
-    console.log("Drag stopped");
+  // const handleNoteStop = (event, ui) => {
+  //   console.log("Drag stopped");
    
-  };
+  // };
   useEffect(() => {
-    console.log(position,"ppppppppppppp");
+    // console.log(position,"ppppppppppppp");
     localStorage.setItem("notePositions", JSON.stringify(position));
     
     console.log(JSON.parse(localStorage.getItem("notePositions")));
   }, [position]);
   function handleClick(e) {
     setid(e);
-  
   }
   return (
     <>
@@ -88,9 +87,9 @@ export default function Home() {
                   position={position[noteInfo._id]}
                   grid={[25, 25]}
                   scale={1}
-                  onStart={handleNoteStart}
+                  // onStart={handleNoteStart}
                   onDrag={handleNoteDrag}
-                  onStop={handleNoteStop}
+                  // onStop={handleNoteStop}
                   border="parent"
                 >
                   <div
